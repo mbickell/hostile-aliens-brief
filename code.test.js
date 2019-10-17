@@ -6,7 +6,7 @@ const shipData = [
   ["attack", 45, 12, false, 8]
 ]
 
-const ships = code.generateShipData(shipData)
+let ships = code.generateShipData(shipData)
 
 describe("Do ships generate correctly?", () => {
 
@@ -74,6 +74,7 @@ describe("Check game logic", () => {
     ships[0].receiveDamage();
     code.checkMothership(ships);
     expect(ships[0]._isDestroyed).toBe(true);
+    code.removeDeadAliens(ships);
     code.removeDeadAliens(ships);
     code.removeDeadAliens(ships);
     expect(ships.length).toBe(0)

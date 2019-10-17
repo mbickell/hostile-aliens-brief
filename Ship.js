@@ -24,4 +24,3 @@ export default class Ship {
     return `<div class="${this.type}"><div>${this.symbol}</div><div>${this.hitPoints}</div></div>`
   }
 }
-

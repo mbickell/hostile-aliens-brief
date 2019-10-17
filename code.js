@@ -1,5 +1,6 @@
 import Ship from "./Ship.js";
 
+let ships
 
 export const generateShipData = (array) => {
   let ships = array.flatMap(ship => {
@@ -12,20 +13,27 @@ export const generateShipData = (array) => {
   return ships
 }
 
-export const removeDeadAliens = array => {
-  array.filter(() => {
-    for(let i = 0; i < array.length; i++){
-      if(array[i]._isDestroyed){
-        array.splice(i, 1)
-      } 
-    }
-  })
-}
-
 export const randomNumber = array => Math.floor(Math.random() * array.length);
 
 export const damageRandomShip = array => {
   array[randomNumber(array)].receiveDamage();
+}
+
+export const checkMothership = array => {
+  if (array[0]._isDestroyed) {
+    array.forEach(ship => {
+      ship._isDestroyed = true;
+    });
+    removeDeadAliens(array);
+  }
+}
+
+export const removeDeadAliens = array => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i]._isDestroyed) {
+      array.splice(i, 1)
+    }
+  }
 }
 
 export const insertShips = array => {
@@ -33,7 +41,7 @@ export const insertShips = array => {
   main.innerHTML = ""
   let html = ""
   array.forEach(ship => html += ship.render());
-  main.innerHTML =  html;
+  main.innerHTML = html;
 }
 
 export const damageShipAndUpdateDisplay = array => {
@@ -41,13 +49,4 @@ export const damageShipAndUpdateDisplay = array => {
   checkMothership(array)
   removeDeadAliens(array);
   insertShips(array);
-}
-
-export const checkMothership = array => {
-  if(array[0]._isDestroyed) {
-    array.forEach(ship => {
-      ship._isDestroyed = true;
-    });
-    removeDeadAliens(array);
-  }
 }
