@@ -15,3 +15,21 @@ footer {
 button {
   margin: auto;
 }
+
+.mothership, .defence, .attack {
+  display: inline-block;
+  text-align: center;
+  margin: 5vh 0;
+}
+
+.mothership {
+  width: 95vw;
+}
+
+.defence {
+  width: 19vw;
+}
+
+.attack {
+  width: 12vw;
+}

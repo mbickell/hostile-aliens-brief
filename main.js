@@ -1,7 +1,7 @@
 import {
   generateShipData,
-  removeDeadAliens,
-
+  insertShips, 
+  damageShipAndUpdateDisplay,
 } 
 from "./code.js"
 
@@ -13,4 +13,17 @@ const shipData = [
 ]
 let ships = generateShipData(shipData)
 
-console.log(ships[0].symbol)
+insertShips(ships)
+
+let fireButton = document.getElementById("fire");
+
+fireButton.addEventListener("click", () => {
+  damageShipAndUpdateDisplay(ships)
+})
+
+let resetButton = document.getElementById("reset");
+
+resetButton.addEventListener("click", () => {
+  ships = generateShipData(shipData)
+  insertShips(ships)
+})

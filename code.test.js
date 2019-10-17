@@ -58,3 +58,24 @@ describe("Random generation tests", () => {
     expect(ships[1]._currentHitPoints).toBe(70)
   })
 })
+
+describe("Check game logic", () => {
+  test("If motheship is destroyed, everything else is destroyed", () => {
+    ships[0].receiveDamage();
+    ships[0].receiveDamage();
+    ships[0].receiveDamage();
+    ships[0].receiveDamage();
+    ships[0].receiveDamage();
+    ships[0].receiveDamage();
+    ships[0].receiveDamage();
+    ships[0].receiveDamage();
+    ships[0].receiveDamage();
+    ships[0].receiveDamage();
+    ships[0].receiveDamage();
+    code.checkMothership(ships);
+    expect(ships[0]._isDestroyed).toBe(true);
+    code.removeDeadAliens(ships);
+    code.removeDeadAliens(ships);
+    expect(ships.length).toBe(0)
+  })
+})

@@ -21,7 +21,7 @@ export default class Ship {
     return `${this._currentHitPoints}/${this.maxHitPoints}`
   }
   render() {
-    return `<span><span>${this.symbol}<span><div>${this.hitPoints}</div></span>`
+    return `<div class="${this.type}"><div>${this.symbol}</div><div>${this.hitPoints}</div></div>`
   }
 }
 
