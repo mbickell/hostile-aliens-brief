@@ -1,5 +1,9 @@
-import Ship from "./Ship.js";
-// import {} from "./code"
+import {
+  generateShipData,
+  removeDeadAliens,
+
+} 
+from "./code.js"
 
 
 const shipData = [
@@ -7,9 +11,6 @@ const shipData = [
   ["defence", 80, 10, false, 5],
   ["attack", 45, 12, false, 8]
 ]
+let ships = generateShipData(shipData)
 
-let ships = shipData.map(ship => {
-  return new Ship(ship[0], ship[1], ship[2], ship[3], ship[4])
-})
-
-console.log(ships)
+console.log(ships[0].symbol)
