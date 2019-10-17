@@ -3,7 +3,7 @@
 }
 
 footer {
-  height: 10vh;
+  height: 20vh;
   width: 100vw;
   position: absolute;
   bottom: 0;
@@ -14,22 +14,40 @@ footer {
 
 button {
   margin: auto;
+  font-size: 4vh;
+  padding: 10px;
+}
+
+#fire {
+  background-color: red;
+  color: white;
+}
+
+#reset {
+  background-color: black;
+  color: white;
 }
 
 .mothership, .defence, .attack {
   display: inline-block;
   text-align: center;
   margin: 5vh 0;
+  font-size: 4vh;
 }
 
 .mothership {
   width: 95vw;
+  color: purple;
+  font-size: 5vh
 }
 
 .defence {
   width: 19vw;
+  color: blue;
 }
 
 .attack {
   width: 12vw;
+  color: red;
+  font-size: 3vh;
 }
