@@ -10,7 +10,7 @@ main {
 }
 
 footer {
-  height: 20vh;
+  height: 8vh;
   min-width: 100vw;
   position: absolute;
   bottom: 0;
@@ -22,7 +22,7 @@ footer {
 
 button {
   margin: auto;
-  font-size: 4vh;
+  font-size: 2vh;
   padding: 10px;
 }
 
