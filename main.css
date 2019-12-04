@@ -2,9 +2,14 @@
   box-sizing: border-box;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 footer {
   height: 20vh;
-  width: 100vw;
+  min-width: 100vw;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -28,7 +33,9 @@ button {
   color: white;
 }
 
-.mothership, .defence, .attack {
+.mothership,
+.defence,
+.attack {
   display: inline-block;
   text-align: center;
   margin: 5vh 0;
@@ -36,18 +43,18 @@ button {
 }
 
 .mothership {
-  width: 95vw;
+  min-width: 95vw;
   color: purple;
-  font-size: 5vh
+  font-size: 5vh;
 }
 
 .defence {
-  width: 19vw;
+  min-width: 19vw;
   color: blue;
 }
 
 .attack {
-  width: 12vw;
+  min-width: 12vw;
   color: red;
   font-size: 3vh;
 }
