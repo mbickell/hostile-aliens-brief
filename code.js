@@ -6,7 +6,7 @@ export const generateShipData = array => {
   let ships = array.flatMap(ship => {
     let typeOfShips = [];
     for (let i = 0; i < ship[5]; i++) {
-      typeOfShips.push(new Ship(ship[0], ship[1], ship[2], ship[3]));
+      typeOfShips.push(new Ship(ship[0], ship[1], ship[2], ship[3], ship[4]));
     }
     return typeOfShips;
   });
