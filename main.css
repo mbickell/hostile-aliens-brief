@@ -1,28 +1,20 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 footer {
-  height: 8vh;
-  min-width: 100vw;
+  height: 20vh;
+  width: 100vw;
   position: absolute;
   bottom: 0;
   left: 0;
   display: flex;
   justify-content: center;
-  background-color: green;
 }
 
 button {
   margin: auto;
-  font-size: 2vh;
+  font-size: 4vh;
   padding: 10px;
 }
 
@@ -36,44 +28,26 @@ button {
   color: white;
 }
 
-.mothership,
-.defence,
-.attack {
+.mothership, .defence, .attack {
   display: inline-block;
   text-align: center;
   margin: 5vh 0;
+  font-size: 4vh;
 }
 
 .mothership {
-  min-width: 95vw;
+  width: 95vw;
   color: purple;
-}
-
-.mothership img {
-  height: 10vh;
+  font-size: 5vh
 }
 
 .defence {
-  min-width: 19vw;
+  width: 19vw;
   color: blue;
 }
 
-.defence img {
-  height: 11vh;
-}
-
 .attack {
-  min-width: 12vw;
+  width: 12vw;
   color: red;
-}
-
-.attack img {
-  height: 5vh;
-}
-
-p {
-  border: 2px solid black;
-  width: 11vh;
   font-size: 3vh;
-  margin: auto;
 }

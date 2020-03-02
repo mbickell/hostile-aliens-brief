@@ -1,21 +1,22 @@
-import { generateShipData, insertShips, damageShipAndUpdateDisplay } from "./code.js";
-
+import {
+  generateShipData,
+  insertShips, 
+  damageShipAndUpdateDisplay,
+} 
+from "./code.js"
 const shipData = [
-  ["mothership", "./images/mothership.jpg", 100, 9, true, 1],
-  ["defence", "./images/defence.png", 80, 10, false, 5],
-  ["attack", "./images/attack.png", 45, 12, false, 8]
-];
-
-let ships = generateShipData(shipData);
+  ["mothership", 100, 9, true, 1],
+  ["defence", 80, 10, false, 5],
+  ["attack", 45, 12, false, 8]
+]
+let ships = generateShipData(shipData)
+insertShips(ships)
 let fireButton = document.getElementById("fire");
-let resetButton = document.getElementById("reset");
-
-insertShips(ships);
 fireButton.addEventListener("click", () => {
-  damageShipAndUpdateDisplay(ships);
-});
-
+  damageShipAndUpdateDisplay(ships)
+})
+let resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", () => {
-  ships = generateShipData(shipData);
-  insertShips(ships);
-});
+  ships = generateShipData(shipData)
+  insertShips(ships)
+})
